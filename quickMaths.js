@@ -6,6 +6,16 @@ class Complex {
 		this.re = re;
 		this.im = im;
 	}
+
+	arg() {
+
+		return Math.atan2(this.im, this.re);
+	}
+
+	mod() {
+
+		return Math.sqrt(this.re*this.re + this.im*this.im);
+	}
 }
 
 function comExp(x) {
@@ -44,6 +54,7 @@ function comScale(z1, s) {
 	// z1*s
 	return new Complex(z1.re*s, z1.im*s);
 }
+
 
 class Matrix {
 	constructor(rows, cols) {
